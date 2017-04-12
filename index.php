@@ -8,6 +8,7 @@
 include ('pages/home.php');
 include ('pages/hosting.php');
 include ('pages/cloud.php');
+include ('pages/contact.php');
 
 ?>
 
@@ -80,6 +81,7 @@ include ('pages/cloud.php');
 			}
 			case "contact":
 			{
+				contact_page();
 				break;
 			}
 			default:
@@ -111,11 +113,102 @@ footer
 
 <script>
 
+function check_forms()
+{
+	var nietgevuldcount = 0;
+	
+	if(document.forms['cforms'].V_Naam.value === "")
+	{		
+		var bborder = document.getElementsByName("V_Naam");
+		bborder[0].style.border = "2px solid red";
+		bborder[0].style.backgroundColor = "pink";
+		
+		nietgevuldcount ++;
+	}
+	else
+	{
+		var bborder = document.getElementsByName("V_Naam");
+		bborder[0].style.border = "2px solid grey";
+		bborder[0].style.backgroundColor = "white";		
+	}
+	
+	if(document.forms['cforms'].A_Naam.value === "")
+	{		
+		var bborder = document.getElementsByName("A_Naam");
+		bborder[0].style.border = "2px solid red";
+		bborder[0].style.backgroundColor = "pink";
+		
+		nietgevuldcount ++;
+	}
+	else
+	{
+		var bborder = document.getElementsByName("A_Naam");
+		bborder[0].style.border = "2px solid grey";
+		bborder[0].style.backgroundColor = "white";		
+	}
+	
+	if(document.forms['cforms'].telnr.value === "")
+	{		
+		var bborder = document.getElementsByName("telnr");
+		bborder[0].style.border = "2px solid red";
+		bborder[0].style.backgroundColor = "pink";
+		
+		nietgevuldcount ++;
+	}
+	else
+	{
+		var bborder = document.getElementsByName("telnr");
+		bborder[0].style.border = "2px solid grey";
+		bborder[0].style.backgroundColor = "white";		
+	}
+	
+	if(document.forms['cforms'].EMail.value === "")
+	{		
+		var bborder = document.getElementsByName("EMail");
+		bborder[0].style.border = "2px solid red";
+		bborder[0].style.backgroundColor = "pink";
+		
+		nietgevuldcount ++;
+	}
+	else
+	{
+		var bborder = document.getElementsByName("EMail");
+		bborder[0].style.border = "2px solid grey";
+		bborder[0].style.backgroundColor = "white";		
+	}
+	
+	if(document.forms['cforms'].Bericht.value === "")
+	{		
+		var bborder = document.getElementsByName("Bericht");
+		bborder[0].style.border = "2px solid red";
+		bborder[0].style.backgroundColor = "pink";
+		
+		nietgevuldcount ++;
+	}
+	else
+	{
+		var bborder = document.getElementsByName("Bericht");
+		bborder[0].style.border = "2px solid grey";
+		bborder[0].style.backgroundColor = "white";		
+	}
+	
+	if(nietgevuldcount)
+	{
+		txt_change = document.getElementById("waarschuwing");
+		txt_change.innerHTML = "<p>U heeft niet alles ingevuld!</p>";		
+	}
+	else
+	{
+		txt_change = document.getElementById("waarschuwing");
+		txt_change.innerHTML = "";		
+	}
+}
+
+
 c1_maand();
 
 function c1_maand(page)
 {
-	
 	var txt_change;
 	var prijs;
 	

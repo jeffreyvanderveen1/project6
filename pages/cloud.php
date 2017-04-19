@@ -9,7 +9,8 @@ function cloud_page()
 	
 		<h2>Informatie</h2>
 		<p>
-			sdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasadsdsads
+			Hieronder zijn 3 cloud pakketten te vinden waar u uit kan kiezen.<br />
+			Klik op de knoppen om te zien wat de prijzen zijn wanneer u welke versie kiest.
 		</p>
 		
 		<h2>Cloud Pakketten</h2>

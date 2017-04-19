@@ -9,6 +9,7 @@ include ('pages/home.php');
 include ('pages/hosting.php');
 include ('pages/cloud.php');
 include ('pages/contact.php');
+include ('pages/klanten.php');
 
 ?>
 
@@ -38,6 +39,15 @@ include ('pages/contact.php');
 	<li><a href="?page=home">Home</a></li>
 	<li><a href="?page=hosting">Hosting</a></li>
 	<li><a href="?page=cloud">Cloud</a></li>
+	 <div class="dropdown">
+		  <button class="dropbtn">Onze Klanten</button>
+		  <div class="dropdown-content">
+			<a href = "?page=spelpunt">Spelpunt</a>
+			<a href = "?page=alfa">Alfa-College</a>
+			<a href = "?page=msn" >MSN</a>
+			<a href = "?page=jumbo">Jumbo</a>
+		  </div>
+	</div>
 	<li><a href="?page=contact">Contact</a></li>
 	 <div class="dropdown">
 		  <button class="dropbtn">Social Media</button>
@@ -82,6 +92,26 @@ include ('pages/contact.php');
 			case "contact":
 			{
 				contact_page();
+				break;
+			}
+			case "spelpunt":
+			{
+				spelpunt();
+				break;
+			}
+			case "alfa":
+			{
+				alfa();
+				break;
+			}
+			case "msn":
+			{
+				msn();
+				break;
+			}
+			case "jumbo":
+			{
+				jumbo();
 				break;
 			}
 			default:

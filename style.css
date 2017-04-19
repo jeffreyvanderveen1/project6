@@ -1,6 +1,7 @@
 body
 {
 	margin: 0;
+
 }
 
 html {
@@ -238,6 +239,7 @@ html {
 	margin-top: 50px;
 	color: #0f51bc;
 	border-top: 1px solid #edeeef;
+	margin-bottom:50px;
 }
 
 #content h1
@@ -324,6 +326,7 @@ border-top: 1px solid #edeeef;
 	padding-left: 20px;
 	margin-left: 20px;
 	vertical-align: top;
+
 }
 
 #artikelen
@@ -457,11 +460,44 @@ border-top: 1px solid #edeeef;
     background-color: #eff2f7;
 }
 
-
 .form_bar
 {
 	width: 170px; 
 	height: 18px; 
 	margin-top:10px; 
 	border: 2px solid grey;
+}
+
+#slide_container
+{
+	height: 500px;
+	width: 70%;
+	margin:0 auto;
+	margin-bottom: 88px;
+}
+
+.slide_foto
+{
+	height: 500px;
+	width: 100%;
+}
+
+#laadbar
+{
+	width: 0%;
+	background-color: red;
+	height:6px;
+	border: 1px solid black;
+}
+
+#slidetxt
+{
+	padding-bottom:5px;
+	color: grey;
+	background-color: #edeeef;
+	text-align: right;
+	padding:5px;
+	font-weight: bold;
+	font-size:20px;
+	
 }

@@ -113,6 +113,53 @@ footer
 
 <script>
 
+var slideID = 1;
+
+photoSlider();
+loadingBar(0);
+
+
+function photoSlider()
+{
+	var photoslide = document.getElementsByClassName("slide_foto");
+	
+	if(slideID > photoslide.length) slideID = 1;
+	
+	for (i = 0; i < photoslide.length; i++) 
+	{
+		photoslide[i].style.display = "none";
+	}
+	
+	photoslide[slideID-1].style.display = "block";
+	
+	slideID ++;
+}
+
+var laadPerc = 0;
+
+function loadingBar(seq)
+{
+	var laadbarz = document.getElementById("laadbar");
+	var slidetekst = document.getElementById("slidetxt");
+	
+	laadbarz.style.width = seq + '%';
+	
+	if(seq == 100)
+	{
+		photoSlider();
+		seq = 1;
+		
+		var berichten = ["Wij bieden de snelste snelheden...", "De beste klantenservice is ons streven...", "Draai je eigen servers...", "Begin je eigen cloud opslag..."];
+		
+		slidetekst.innerHTML = berichten[slideID-2];
+	}
+
+	seq ++;
+	
+	setTimeout(loadingBar, 30, seq);
+}
+
+
 function check_forms()
 {
 	var nietgevuldcount = 0;

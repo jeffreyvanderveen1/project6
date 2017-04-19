@@ -5,6 +5,15 @@ function home_page()
 
 	<h1>Home...</h1>
 	
+	<div id = "slide_container">
+		<img class = "slide_foto" src = "images/pic1.jpg"></img>
+		<img class = "slide_foto" src = "images/pic2.jpg"></img>
+		<img class = "slide_foto" src = "images/pic3.jpg"></img>
+		<img class = "slide_foto" src = "images/pic4.jpg"></img>
+		<div id = "slidetxt">Wij bieden de snelste snelheden...</div>
+		<div id = "laadbar"></div>
+	</div>
+
 	<div id = "articles">
 	
 		<div class = "links">

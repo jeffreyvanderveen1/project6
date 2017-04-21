@@ -489,9 +489,9 @@ border-top: 1px solid #edeeef;
 #laadbar
 {
 	width: 0%;
-	background-color: red;
+	background-color: #5cdff9;
 	height:6px;
-	border: 1px solid black;
+	border: 1px solid #4ec1d8;
 }
 
 #slidetxt

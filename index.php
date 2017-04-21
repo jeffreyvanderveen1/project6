@@ -126,7 +126,7 @@ include ('pages/klanten.php');
 
 <div id = "footer">
 
-footer
+Coliccs &#9400; 2017
 
 </body>
 </html>
@@ -189,98 +189,32 @@ function loadingBar(seq)
 	setTimeout(loadingBar, 30, seq);
 }
 
-
 function check_forms()
 {
-	var nietgevuldcount = 0;
+	var nietgevuld;
 	
-	if(document.forms['cforms'].V_Naam.value === "")
-	{		
-		var bborder = document.getElementsByName("V_Naam");
-		bborder[0].style.border = "2px solid red";
-		bborder[0].style.backgroundColor = "pink";
-		
-		nietgevuldcount ++;
-	}
-	else
-	{
-		var bborder = document.getElementsByName("V_Naam");
-		bborder[0].style.border = "2px solid grey";
-		bborder[0].style.backgroundColor = "white";		
-	}
+	var forms = document.getElementsByClassName("form_bar");
 	
-	if(document.forms['cforms'].A_Naam.value === "")
-	{		
-		var bborder = document.getElementsByName("A_Naam");
-		bborder[0].style.border = "2px solid red";
-		bborder[0].style.backgroundColor = "pink";
-		
-		nietgevuldcount ++;
-	}
-	else
+	for(i = 0; i < forms.length; i ++)
 	{
-		var bborder = document.getElementsByName("A_Naam");
-		bborder[0].style.border = "2px solid grey";
-		bborder[0].style.backgroundColor = "white";		
-	}
-	
-	if(document.forms['cforms'].telnr.value === "")
-	{		
-		var bborder = document.getElementsByName("telnr");
-		bborder[0].style.border = "2px solid red";
-		bborder[0].style.backgroundColor = "pink";
-		
-		nietgevuldcount ++;
-	}
-	else
-	{
-		var bborder = document.getElementsByName("telnr");
-		bborder[0].style.border = "2px solid grey";
-		bborder[0].style.backgroundColor = "white";		
-	}
-	
-	if(document.forms['cforms'].EMail.value === "")
-	{		
-		var bborder = document.getElementsByName("EMail");
-		bborder[0].style.border = "2px solid red";
-		bborder[0].style.backgroundColor = "pink";
-		
-		nietgevuldcount ++;
-	}
-	else
-	{
-		var bborder = document.getElementsByName("EMail");
-		bborder[0].style.border = "2px solid grey";
-		bborder[0].style.backgroundColor = "white";		
-	}
-	
-	if(document.forms['cforms'].Bericht.value === "")
-	{		
-		var bborder = document.getElementsByName("Bericht");
-		bborder[0].style.border = "2px solid red";
-		bborder[0].style.backgroundColor = "pink";
-		
-		nietgevuldcount ++;
-	}
-	else
-	{
-		var bborder = document.getElementsByName("Bericht");
-		bborder[0].style.border = "2px solid grey";
-		bborder[0].style.backgroundColor = "white";		
-	}
-	
-	if(nietgevuldcount)
-	{
-		txt_change = document.getElementById("waarschuwing");
-		txt_change.innerHTML = "<p>U heeft niet alles ingevuld!</p>";		
-	}
-	else
-	{
-		txt_change = document.getElementById("waarschuwing");
-		txt_change.innerHTML = "";		
-	}
-}
+		if(forms[i].value == "")
+		{
+			forms[i].style.border = "2px solid red";
+			forms[i].style.backgroundColor = "pink";
 
+			nietgevuld ++;
+		}
+		else
+		{
+			forms[i].style.border = "2px solid grey";
+			forms[i].style.backgroundColor = "white";			
+		}
+	}
+	
+	txt_change = document.getElementById("waarschuwing");
+	
+	(nietgevuld) ? txt_change.innerHTML = "<p>U heeft niet alles ingevuld!</p>" : txt_change.innerHTML = "";
+}
 
 c1_maand();
 

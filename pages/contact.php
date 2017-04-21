@@ -51,7 +51,7 @@ function contact_page()
 				<strong>Bericht:</strong>
 			</td>
 			<td>
-				<textarea maxlength="500" style="width: 500px; height: 250px; margin-top:10px; border: 1px solid grey;vertical-align:top;" title="Bericht" name="Bericht"></textarea>
+				<textarea class = "form_bar" maxlength="500" style="width: 500px; height: 250px; margin-top:10px; border: 1px solid grey;vertical-align:top;" title="Bericht" name="Bericht"></textarea>
 			</td>
 		</tr>
 	</table>

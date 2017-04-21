@@ -191,7 +191,7 @@ function loadingBar(seq)
 
 function check_forms()
 {
-	var nietgevuld;
+	var nietgevuld = 0;
 	
 	var forms = document.getElementsByClassName("form_bar");
 	
@@ -211,9 +211,9 @@ function check_forms()
 		}
 	}
 	
-	txt_change = document.getElementById("waarschuwing");
+	var txt_change = document.getElementById("waarschuwing");
 	
-	(nietgevuld) ? txt_change.innerHTML = "<p>U heeft niet alles ingevuld!</p>" : txt_change.innerHTML = "";
+	(nietgevuld > 0) ? txt_change.innerHTML = "<p>U heeft niet alles ingevuld!</p>" : txt_change.innerHTML = "";
 }
 
 c1_maand();
